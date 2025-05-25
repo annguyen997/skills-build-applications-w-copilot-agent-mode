@@ -34,11 +34,11 @@ class Command(BaseCommand):
 
         # Activities
         activities = [
-            {"_id": ObjectId(), "user": users[0]["_id"], "activity_type": "Cycling", "duration": 60*60},
-            {"_id": ObjectId(), "user": users[1]["_id"], "activity_type": "Crossfit", "duration": 2*60*60},
-            {"_id": ObjectId(), "user": users[2]["_id"], "activity_type": "Running", "duration": 90*60},
-            {"_id": ObjectId(), "user": users[3]["_id"], "activity_type": "Strength", "duration": 30*60},
-            {"_id": ObjectId(), "user": users[4]["_id"], "activity_type": "Swimming", "duration": 75*60},
+            {"_id": ObjectId(), "user": users[0]["_id"], "activity_type": "Cycling", "duration": timedelta(seconds=60*60)},
+            {"_id": ObjectId(), "user": users[1]["_id"], "activity_type": "Crossfit", "duration": timedelta(seconds=2*60*60)},
+            {"_id": ObjectId(), "user": users[2]["_id"], "activity_type": "Running", "duration": timedelta(seconds=90*60)},
+            {"_id": ObjectId(), "user": users[3]["_id"], "activity_type": "Strength", "duration": timedelta(seconds=30*60)},
+            {"_id": ObjectId(), "user": users[4]["_id"], "activity_type": "Swimming", "duration": timedelta(seconds=75*60)},
         ]
         db.activity.insert_many(activities)
 
